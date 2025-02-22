@@ -40,7 +40,7 @@
     text-transform: lowercase;
   }
   
-  /* Hero Section */
+  /* Homepage Section */
   .homepage {
     position: relative;
     display: flex;
@@ -104,3 +104,58 @@
     transform: rotate(15deg);
   }
   
+
+
+
+/* Contact Information */
+
+.contact-information{
+    display: flex;
+    flex-direction: column;
+}
+
+#contact-information_header{
+    padding-top: 30px;
+    text-align: center;
+}
+
+#contact-information_form{
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    gap: 30px; 
+    /*width: 100%;*/
+}
+#about_me{
+    text-align: left;
+    width: 50%;
+    height: 250px;
+    padding: 8px;  
+    border: 1px solid black;
+    border-radius: 20px;
+}
+#about_me::placeholder {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    text-align: left;
+}
+
+#firstName, #lastName, #major{
+    text-align: left;
+    width: 50%;
+    height: 50px;
+    padding: 8px;
+    border: 1px solid black;
+    border-radius: 20px;
+}
+#consent_form{
+    display: flex;
+    justify-content: space-between;
+
+}
+#submit_information{
+    width: 10%;
+    height: 30%;
+}
