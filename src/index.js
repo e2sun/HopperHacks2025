@@ -92,10 +92,19 @@ function loadQuestions() {
 function loadResults(){
     mainContent.innerHTML = `
         <h1>CONGRATS you filled out the forms</h1>
+        <button id="createUser-btn">Create User</button>
     `;
+    const createUser = document.getElementById("createUser-btn");
+    createUser.addEventListener("click", loadCreateUser);
     clearQuiz();
 }
 
 function clearQuiz() {
     indexCounter = 0;
+}
+
+function loadCreateUser(){
+    mainContent.innerHTML = `
+        <h1> PLACE HOLDER </h1>
+    `;
 }
