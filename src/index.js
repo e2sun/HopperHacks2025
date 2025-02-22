@@ -10,9 +10,17 @@ const results = [{answer: 1, count: 0},
                  {answer: 3, count: 0},
                  {answer: 4, count: 0}];
 
+const users=[];
 
 window.onload = function(){
+    addModel();
     loadHomePage();
+}
+
+function addModel(){
+    user.forEach(user=> {
+      users.push(user);
+    });
 }
 
 function loadHomePage() {
@@ -58,6 +66,8 @@ function loadQuizStart() {
     const startQuizButton = document.getElementById("startQuiz-btn");
     startQuizButton.addEventListener("click", loadQuestions);
 }
+
+//LOAD HOMEPAGE
 
 function loadQuestions() {
     const question = questions[indexCounter].question;
