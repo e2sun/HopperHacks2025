@@ -1,9 +1,14 @@
 // IMPORTS
 import {questions} from './questions.js' // importing the questions array
+let quizResult = 0;
 
 // COMMON USE CONSTANTS
 const mainContent = document.getElementById('main');
 let indexCounter = 0;
+const results = [{answer: 1, count: 0},
+                 {answer: 2, count: 0},
+                 {answer: 3, count: 0},
+                 {answer: 4, count: 0}];
 
 const users=[];
 
@@ -27,13 +32,13 @@ function loadHomePage() {
         </div>
         <div class="wolfie-image">
             <!-- wolfie image -->
-            <img src="wolfie.png" alt="drawn image of wolfie">
+            <!--<img src="wolfie.png" alt="drawn image of wolfie">-->
         </div>
         <!-- Decorative Paw Icons -->
         <div class="paw-container">
             <!-- actual paw image files -->
-            <img src="paw1.png" alt="paw icon" class="paw paw-top-left">
-            <img src="paw2.png" alt="paw icon" class="paw paw-bottom-right">
+            <!--<img src="paw1.png" alt="paw icon" class="paw paw-top-left">
+            <img src="paw2.png" alt="paw icon" class="paw paw-bottom-right">-->
         </div>
         </section>
     `;
@@ -70,39 +75,105 @@ function loadQuestions() {
     const answer4 = questions[indexCounter].answer4;
     mainContent.innerHTML = `
         <h1>${question}</h1>
-        <p>${indexCounter}</p>
-        <button id="next_question">Next Question</button>
+        <button id="answer1-btn" type="submit" class="answers">${answer1}</button>
+        <button id="answer2-btn" type="submit" class="answers">${answer2}</button>
+        <button id="answer3-btn" type="submit" class="answers">${answer3}</button>
+        <button id="answer4-btn" type="submit" class="answers">${answer4}</button>
     `;
-    const nextButton = document.getElementById("next_question");
+    const firstAnswer = document.getElementById("answer1-btn");
+    const secondAnswer = document.getElementById("answer2-btn");
+    const thirdAnswer = document.getElementById("answer3-btn");
+    const fourthAnswer = document.getElementById("answer4-btn");
 
-    if(indexCounter === (questions.length-1)){
-        nextButton.innerHTML = `
-            Submit Quiz
-        `;
-        nextButton.addEventListener("click", loadResults);
-    } else{
-        nextButton.addEventListener("click", () => {
-            indexCounter += 1;
-            console.log(indexCounter);
+    firstAnswer.addEventListener("click", () => {
+        if(indexCounter === (questions.length-1)){
+            results[0].count += 1;
+            loadResults();
+        } else {
+            indexCounter +=1;
+            results[0].count += 1;
             loadQuestions();
-        });
-    }
+        }
+    })
+
+    secondAnswer.addEventListener("click", () => {
+        if(indexCounter === (questions.length-1)){
+            results[1].count += 1;
+            loadResults();
+        } else {
+            indexCounter +=1;
+            results[1].count += 1;
+            loadQuestions();
+        }
+    })
+
+    thirdAnswer.addEventListener("click", () => {
+        if(indexCounter === (questions.length-1)){
+            results[2].count += 1;
+            loadResults();
+        } else {
+            indexCounter +=1;
+            results[2].count += 1;
+            loadQuestions();
+        }
+    })
+
+    fourthAnswer.addEventListener("click", () => {
+        if(indexCounter === (questions.length-1)){
+            results[3].count += 1;
+            loadResults();
+        } else {
+            indexCounter +=1;
+            results[3].count += 1;
+            loadQuestions();
+        }
+    })
 }
 
+// RESULTS PAGE
 function loadResults(){
+    results.sort(function(a,b){return a.count - b.count});
+    quizResult = results[3].answer;
     mainContent.innerHTML = `
         <h1>CONGRATS you filled out the forms</h1>
+        <p id="results"> result: you are... <p>
         <button id="createUser-btn">Create User</button>
     `;
+    const shareResult = document.getElementById("results");
+    if(result === 1){
+        shareResult.innerHTML = `
+            result: you are... NUMBER 1
+        `;
+    } else if(result === 2){
+        shareResult.innerHTML = `
+            result: you are... NUMBER 2
+        `;
+    } else if(result === 3){
+        shareResult.innerHTML = `
+            result: you are... NUMBER 3
+        `;
+    } else {
+        shareResult.innerHTML = `
+            result: you are... NUMBER 4
+        `;
+    }
     const createUser = document.getElementById("createUser-btn");
     createUser.addEventListener("click", loadCreateUser);
     clearQuiz();
 }
 
+// RESETTING QUIZ
 function clearQuiz() {
     indexCounter = 0;
+    results[0].count = 0;
+    results[1].count = 0;
+    results[2].count = 0;
+    results[3].count = 0;
+    quizResult = 0;
+    results.sort(function(a,b){return a.answer - b.answer});
 }
 
+// CREATING USER
 function loadCreateUser(){
     mainContent.innerHTML = `
         <h1> PLACE HOLDER </h1>
