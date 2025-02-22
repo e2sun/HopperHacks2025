@@ -1,7 +1,7 @@
 export default class Database {
     constructor() {
         this.data = {
-            User: [ 
+            user: [ 
                 { // User 1
                     firstName: 'Evelyn',
                     lastName: '',
@@ -35,7 +35,7 @@ export default class Database {
                     year: 'Sophomore',
                     major: ['Information Systems'],
                     description: 'About me',
-                    insta: ''.
+                    insta: '',
                     email: ''
                 }
             ],
