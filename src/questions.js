@@ -1,7 +1,7 @@
 export const questions = [
     { // question object 1
         questionID: 'question1',
-        question: 'What time do you normally sleep?',
+        question: 'What time do you normally go to sleep?',
         answer1: '9 to 10PM',
         answer2: '10 to 11PM',
         answer3: '11 to 12AM',
@@ -96,5 +96,14 @@ export const questions = [
         answer2: 'The social butterfly attending every event',
         answer3: 'The active athlete on the field',
         answer4: 'The creative artist finding inspiration in every corner'
+    },
+
+    { // question object 12
+        questionID: 'question12',
+        question: 'Do you have any questions? (cus i don\'t feel like coming up with one)',
+        answer1: 'yes i do',
+        answer2: 'yuhhhhhh',
+        answer3: 'sure thing',
+        answer4: 'go away please'
     }
 ];
