@@ -16,6 +16,7 @@ window.onload = function(){
 }
 
 function loadHomePage() {
+    clearQuiz();
     mainContent.innerHTML = `
         <section class="homepage">
         <div class="homepage-content">
@@ -48,6 +49,7 @@ quizPageButtons.addEventListener("click", loadQuizStart);
 
 // QUIZ PAGES
 function loadQuizStart() {
+    clearQuiz();
     mainContent.innerHTML = `
         <h1> QUIZ INTRO </h1>
         <button id="startQuiz-btn">Start Quiz</button
@@ -64,11 +66,13 @@ function loadQuestions() {
     const answer3 = questions[indexCounter].answer3;
     const answer4 = questions[indexCounter].answer4;
     mainContent.innerHTML = `
-        <h1>${question}</h1>
-        <button id="answer1-btn" type="submit" class="answers">${answer1}</button>
-        <button id="answer2-btn" type="submit" class="answers">${answer2}</button>
-        <button id="answer3-btn" type="submit" class="answers">${answer3}</button>
-        <button id="answer4-btn" type="submit" class="answers">${answer4}</button>
+        <h1 id="question_header">${question}</h1>
+        <div id="answer_list">
+            <button id="answer1-btn" class="answer_button">${answer1}</button>
+            <button id="answer2-btn" class="answer_button">${answer2}</button>
+            <button id="answer3-btn" class="answer_button">${answer3}</button>
+            <button id="answer4-btn" class="answer_button">${answer4}</button>
+        </div>
     `;
     const firstAnswer = document.getElementById("answer1-btn");
     const secondAnswer = document.getElementById("answer2-btn");
@@ -130,7 +134,12 @@ function loadResults(){
         <button id="createUser-btn">Create User</button>
     `;
     const shareResult = document.getElementById("results");
-    if(quizResult === 1){
+    if(results[0].count == results[1].count && results[2].count == results[3].count && results[0].count == results[3].count){
+        shareResult.innerHTML = `
+            result: you are... SUPER WOLFIE!!!!
+        `;
+        quizResult = 0;
+    } else if(quizResult === 1){
         shareResult.innerHTML = `
             result: you are... NUMBER 1
         `;

@@ -5,10 +5,11 @@
     box-sizing: border-box;
   }
   body {
-    font-family: 'Montserrat', sans-serif;
-    background-color: #ffffff;
+    /*font-family: 'Montserrat', sans-serif;*/
+    font-family: 'Irish Grover', 'serif';
     color: #1e1e1e;
     line-height: 1.6;
+    background-color: #fcf8f2;
   }
   
   /* Container for Layout */
@@ -20,13 +21,13 @@
   
   /* Navigation Banner */
   .nav-banner {
-    background-color: #EFEFEF; /* Gray tone from your Figma */
+    background-color: #d9d9d9;
     padding: 20px 0;
   }
   .nav-banner nav ul {
     list-style: none;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
   }
   .nav-banner nav ul li {
@@ -42,6 +43,7 @@
   
   /* Hero Section */
   .homepage {
+    background-color: #fcf8f2;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -54,12 +56,12 @@
   }
   .homepage-title {
     font-size: 48px;
-    text-transform: lowercase;
     margin-bottom: 20px;
     letter-spacing: 1px;
+    color:#b70000;
   }
   #quiz-btn {
-    background: linear-gradient(90deg, #4facfe, #00f2fe);
+    background-color:#b70000;
     color: #ffffff;
     border: none;
     padding: 15px 40px;
@@ -67,7 +69,7 @@
     font-size: 1.1rem;
     font-weight: 600;
     cursor: pointer;
-    transition: background 0.3s ease;
+    font-family: 'Irish Grover', 'serif';
   }
   .quiz-btn:hover {
     background: linear-gradient(90deg, #00f2fe, #4facfe);
@@ -104,3 +106,27 @@
     transform: rotate(15deg);
   }
   
+  #question_header {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    color: #b70000;
+  }
+
+  #answer_list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .answer_button{
+    margin: 10px;
+    background-color: #00549a;
+    color: #ffffff;
+    font-size: 20px;
+    width: 400px;
+    height: 85px;
+    border-color:  #00549a;
+    border-radius: 25px;
+    font-family: 'Irish Grover', 'serif';
+  }
