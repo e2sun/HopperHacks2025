@@ -54,11 +54,12 @@
     text-align: center;
     margin-bottom: 40px;
   }
-  .homepage-title {
+  .red_heading {
     font-size: 48px;
     margin-bottom: 20px;
     letter-spacing: 1px;
     color:#b70000;
+    text-align: center;
   }
   #quiz-btn {
     background-color:#b70000;
@@ -110,7 +111,6 @@
     text-align: center;
     margin-top: 50px;
     margin-bottom: 30px;
-    color: #b70000;
   }
 
   #answer_list{

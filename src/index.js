@@ -27,12 +27,13 @@ function addModel(){
     });
 }
 
+// LOAD HOMEPAGE
 function loadHomePage() {
     clearQuiz();
     mainContent.innerHTML = `
         <section class="homepage">
         <div class="homepage-content">
-            <h1 class="homepage-title">what type of seawolf are you?</h1>
+            <h1 class="red_heading">what type of seawolf are you?</h1>
             <button id="quiz-btn">take the quiz</button>
         </div>
         <div class="wolfie-image">
@@ -59,6 +60,9 @@ homePageButton.addEventListener("click", loadHomePage);
 const quizPageButtons = document.getElementById("quiz_button");
 quizPageButtons.addEventListener("click", loadQuizStart);
 
+const wolfieTypeButtons = document.getElementById("wolfieType_button");
+wolfieTypeButtons.addEventListener("click", loadWolfieType);
+
 // QUIZ PAGES
 function loadQuizStart() {
     clearQuiz();
@@ -71,8 +75,7 @@ function loadQuizStart() {
     startQuizButton.addEventListener("click", loadQuestions);
 }
 
-//LOAD HOMEPAGE
-
+//LOAD QUESTIONS
 function loadQuestions() {
     const question = questions[indexCounter].question;
     const answer1 = questions[indexCounter].answer1;
@@ -80,7 +83,7 @@ function loadQuestions() {
     const answer3 = questions[indexCounter].answer3;
     const answer4 = questions[indexCounter].answer4;
     mainContent.innerHTML = `
-        <h1 id="question_header">${question}</h1>
+        <h1 id="question_header" class="red_heading">${question}</h1>
         <div id="answer_list">
             <button id="answer1-btn" class="answer_button">${answer1}</button>
             <button id="answer2-btn" class="answer_button">${answer2}</button>
@@ -182,7 +185,9 @@ function clearQuiz() {
     results[1].count = 0;
     results[2].count = 0;
     results[3].count = 0;
+
     //quizResult = 0;
+
     results.sort(function(a,b){return a.answer - b.answer});
 }
 
@@ -389,4 +394,9 @@ function loadMatchUser(){
 // };
 //For each user in the database, go through and check if the userResults == quizResults and if it does, then show the information
 
-
+// WOLFIE TYPE PAGE
+function loadWolfieType() {
+    mainContent.innerHTML = `
+        <h1 class="red_heading">add in wolfie types</h1>
+    `;
+}
