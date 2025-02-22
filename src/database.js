@@ -9,7 +9,8 @@ export default class Database {
                     major: 'Computer Science',
                     description: 'About me',
                     insta: '',
-                    email: ''
+                    email: '',
+                    userResults: 1
                 },
                 { //User 2
                     firstName: 'Malia',
@@ -18,7 +19,8 @@ export default class Database {
                     major: 'Information Systems',
                     description: 'About me',
                     insta: '',
-                    email: ''
+                    email: '',
+                    userResults: 2
                 },
                 { //User 3
                     firstName: 'Charlotte',
@@ -27,7 +29,8 @@ export default class Database {
                     major: 'Computer Science',
                     description: 'About me', 
                     insta: '',
-                    email: ''
+                    email: '',
+                    userResults: 3
                 },
                 { //User 4
                     firstName: 'Esther',
@@ -36,7 +39,8 @@ export default class Database {
                     major: ['Information Systems'],
                     description: 'About me',
                     insta: '',
-                    email: ''
+                    email: '',
+                    userResults: 4
                 }
             ],
         }; // End this.data object
