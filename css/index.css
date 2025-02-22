@@ -167,7 +167,7 @@
     text-align: left;
 }
 
-#firstName, #lastName, #major{
+#firstName, #lastName, #major, #email, #instagram{
     text-align: left;
     width: 50%;
     height: 50px;
