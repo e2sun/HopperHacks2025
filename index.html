@@ -1,19 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Which Seawolf are You?</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Seawolf Quiz</title>
+  <!-- Using Montserrat as specified in your Figma template -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-    <class id="navbar"> 
-        <!-- Should dynamically add this, template code for now-->
-        <!-- Image of logo?-->
-        <div id="web_title"> </div>
-        <div id="personality_test"></div>
-        <div id="wolfie's personalities"></div>
-        <div id="resources"> </div>
-        <div id="take_the_test"></div>
-    </nav>
+  <!-- Navigation Banner -->
+  <header class="nav-banner">
+    <div class="container">
+      <nav>
+        <ul>
+          <li><a href="#">home</a></li>
+          <li><a href="#">quiz</a></li>
+          <li><a href="#">about</a></li>
+          <li><a href="#">contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+   <!-- THIS CODE SHOULD BE DYNAMICALLY DDED WITH JAVASCRIPT -->
+  <main>
+    <section class="homepage">
+      <div class="homepage-content">
+        <h1 class="homepage-title">what type of seawolf are you?</h1>
+        <button class="quiz-btn">take the quiz</button>
+      </div>
+      <div class="wolfie-image">
+        <!-- wolfie image -->
+        <img src="wolfie.png" alt="drawn image of wolfie">
+      </div>
+      <!-- Decorative Paw Icons -->
+      <div class="paw-container">
+        <!-- actual paw image files -->
+        <img src="paw1.png" alt="paw icon" class="paw paw-top-left">
+        <img src="paw2.png" alt="paw icon" class="paw paw-bottom-right">
+      </div>
+    </section>
+  </main>
 </body>
 </html>
