@@ -130,15 +130,15 @@ function loadResults(){
         <button id="createUser-btn">Create User</button>
     `;
     const shareResult = document.getElementById("results");
-    if(result === 1){
+    if(quizResult === 1){
         shareResult.innerHTML = `
             result: you are... NUMBER 1
         `;
-    } else if(result === 2){
+    } else if(quizResult === 2){
         shareResult.innerHTML = `
             result: you are... NUMBER 2
         `;
-    } else if(result === 3){
+    } else if(quizResult === 3){
         shareResult.innerHTML = `
             result: you are... NUMBER 3
         `;
