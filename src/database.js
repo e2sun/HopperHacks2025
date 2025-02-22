@@ -11,7 +11,8 @@ export default class Database {
                     specialization: ['Artifical Intelligence'],
                     description: 'About me',
                     personality: "", // Example personality value
-                    phone_number: ''
+                    insta: '',
+                    email: ''
                 },
                 { //User 2
                     firstName: 'Malia',
@@ -22,9 +23,8 @@ export default class Database {
                     specialization: [],
                     description: 'About me',
                     personality: "", // Example personality value
-                    phone_number: '',
+                    insta: '',
                     email: ''
-
                 },
                 { //User 3
                     firstName: 'Charlotte',
@@ -35,7 +35,7 @@ export default class Database {
                     specialization: [],
                     description: 'About me',
                     personality: "", // Example personality value
-                    phone_number: '',
+                    insta: '',
                     email: ''
                 },
                 { //User 4
@@ -47,7 +47,7 @@ export default class Database {
                     specialization: [],
                     description: 'About me',
                     personality: "", // Example personality value
-                    phone_number: '',
+                    insta: '',
                     email: ''
                 }
             ],
