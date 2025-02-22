@@ -4,22 +4,18 @@ export default class Database {
             User: [ 
                 { // User 1
                     firstName: 'Evelyn',
-                    lastName: 'Sun',
+                    lastName: '',
                     year: 'Sophomore',
                     major: 'Computer Science',
-                    minor: [],
-                    specialization: ['Artifical Intelligence'],
                     description: 'About me',
                     personality: "", // Example personality value
                     phone_number: ''
                 },
                 { //User 2
                     firstName: 'Malia',
-                    lastName: 'Ng',
+                    lastName: '',
                     year: 'Sophomore',
                     major: 'Information Systems',
-                    minor:['Digital Arts'],
-                    specialization: [],
                     description: 'About me',
                     personality: "", // Example personality value
                     phone_number: '',
@@ -28,25 +24,19 @@ export default class Database {
                 },
                 { //User 3
                     firstName: 'Charlotte',
-                    lastName: 'Cain',
+                    lastName: '',
                     year: 'Sophomore',
-                    major: ['Computer Science', 'Applied Math and Statistics'],
-                    minor: [],
-                    specialization: [],
+                    major: 'Computer Science',
                     description: 'About me',
-                    personality: "", // Example personality value
                     phone_number: '',
                     email: ''
                 },
                 { //User 4
                     firstName: 'Esther',
-                    lastName: 'Wang',
+                    lastName: '',
                     year: 'Sophomore',
                     major: ['Information Systems'],
-                    minor: [],
-                    specialization: [],
                     description: 'About me',
-                    personality: "", // Example personality value
                     phone_number: '',
                     email: ''
                 }
