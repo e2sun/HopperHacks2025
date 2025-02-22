@@ -184,3 +184,42 @@
     width: 10%;
     height: 30%;
 }
+
+
+/*MATCHED USER INFO*/
+.matchedusers{
+    margin-left: 10px;
+    margin-bottom: 10px;
+    margin-top: 20px
+}
+
+
+#userdescription{
+    margin-left: 10px;
+    margin-bottom: 1px;
+
+}
+  
+  
+  .username {
+    display: flex;
+    align-items: center;
+    gap: 8px; 
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+    opacity: 0.5;
+    margin-left: 10px;
+    opacity: 0.5;
+    margin-top: 10px;
+  }
+  
+  
+  .user-major,
+  .user-aboutme,
+  .user-description,
+  .user-contact {
+    margin-left: 10px;
+    margin-bottom: 10px;
+  }
+  

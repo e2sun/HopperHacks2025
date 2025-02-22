@@ -6,7 +6,7 @@ let quizResult = 0;
 const mainContent = document.getElementById('main');
 let indexCounter = 0;
 
-let quizResults=0;
+
 
 const results = [{answer: 1, count: 0},
                  {answer: 2, count: 0},
@@ -64,7 +64,7 @@ function loadQuizStart() {
     clearQuiz();
     mainContent.innerHTML = `
         <h1> QUIZ INTRO </h1>
-        <button id="startQuiz-btn">Start Quiz</button
+        <button id="startQuiz-btn">Start Quiz</button>
     `;
 
     const startQuizButton = document.getElementById("startQuiz-btn");
@@ -182,7 +182,7 @@ function clearQuiz() {
     results[1].count = 0;
     results[2].count = 0;
     results[3].count = 0;
-    quizResult = 0;
+    //quizResult = 0;
     results.sort(function(a,b){return a.answer - b.answer});
 }
 
@@ -192,17 +192,18 @@ function loadCreateUser(){
         <div class="contact-information">
     <div id="contact-information_header"> <h1> Contact Information </h1> </div>
     <form id="contact-information_form" action="/send" method="POST">
+        
         <label class = contact_prompt> <h3> First Name (required, max 100 characters) </h3> </label>
         <input id="firstName" type="text" placeholder="First Name (required, max 100 characters)" onfocus="this.placeholder=''"> 
-
         <label class = contact_prompt> <h3> Last Name </h3> </label>
-        <input id="lastName" type="text" placeholder="Last Name (optional, max 100 characters)" onfocus="this.placeholder=''"> 
+        <input id="lastName" type="text" placeholder="Last Name (optional, max 100 characters)" onfocus="this.placeholder=''">
+         
         <label for="year_dropdown"> </label>
 
         <label class = contact_prompt> <h3> Select Year (required) </h3> </label>
         <select name="Select Year (required)" id="year_selection">
             <option value="" label="Select Year (required)"> </option>
-            <option value="Freshmen">Freshman</option>
+            <option value="Freshman">Freshman</option>
             <option value="Sophomore">Sophomore</option>
             <option value="Junior">Junior</option>
             <option value="Senior">Senior</option>
@@ -213,8 +214,10 @@ function loadCreateUser(){
         <input id="major" type="text" placeholder="Primary Major (required, max 100 characters)" onfocus="this.placeholder=''"> 
         <label class = contact_prompt> <h3> Description About Yourself (optional, max 500 characters) </h3> </label>
         <textarea id="about_me" type="text" placeholder="Description About Yourself (optional, max 500 characters)" onfocus="this.placeholder=''"></textarea>
+        <label class = contact_prompt> <h3> Email (required, max 500 characters) </h3> </label>
          <input id="email" type="text" placeholder="Email (required, max 100 characters)" onfocus="this.placeholder=''">
-        <input id="instagram" type="text" placeholder="Instagram Handle (optional, max 100 characters)" onfocus="this.placeholder=''">
+         <label class = contact_prompt> <h3> Instagram Username (optional, max 500 characters) </h3> </label>
+        <input id="instagram" type="text" placeholder="Instagram Username" (optional, max 100 characters)" onfocus="this.placeholder=''">
         <div id="consent_form">
             <label for="consent">I consent to my information being shared with other students.</label>
             <input type="checkbox" id="consent" name="consent" checked />
@@ -238,13 +241,13 @@ function loadCreateUser(){
                 const maxChar = 100;
                 const maxDescription=500; 
                 var firstName = document.getElementById("firstName"); //Get firstName
-                var lastName = document.getElementById("firstName"); //Get lastName
+                var lastName = document.getElementById("lastName"); //Get lastName
                 var year_dropdown  = document.getElementById("year_selection"); //Get year dropdown
                 var major  = document.getElementById("major"); //Get major 
                 var description = document.getElementById("about_me"); //Get description
                 var checkbox = document.getElementById("consent"); //checkbox
                 var email =document.getElementById("email"); //email
-                var insta =document.getElementById("insta"); //insta
+                var insta =document.getElementById("instagram"); //insta
 
                 let firstNameCount=firstName.value.length; //Get length of firstName 
                 var lastNameCount;
@@ -304,7 +307,9 @@ function loadCreateUser(){
                         year: year_selection,
                         major: major.value,
                         description: description.value,
-                        userResults:quizResults.value
+                        userResults:quizResult,
+                        email: email.value,
+                        insta: insta.value
                     };
                 
                     console.log(newUser);
@@ -338,47 +343,31 @@ function loadCreateUser(){
 
 //LOAD CONNECTED USERS
 function loadMatchUser(){
-    mainContent.innerHTML=`<h1 class="matcheduseres" > Matched Users </h1>
-    <div id="matchedUsers"></div>`;
-
-    const matchedUsers = document.getElementById("matchedUsers");
-
+    mainContent.innerHTML=`<h1 class="matchedusers" > Matched Users </h1>`;
+    console.log(quizResult);
     users.forEach(user=> {
         const userResults = user.userResults;
-        // if (!user.lastName==undefined){
-            //FIX THIS
-        // }
-        if (userResults==quizResults || quizResults==0){
+    
+        if (userResults==quizResult || quizResult==0){
             const userDiv = document.createElement("div");
                 userDiv.innerHTML = `
-                    <p id="username"> ${user.firstName} <div id=userlastname> </div> | ${user.year}</p>
-                    <p id="usermajor"> Primary Major: ${user.major} </p>
-                    <h3 class="useraboutme"> About Me</h3>
-                    <p id="userdescription"></h3>
-                    <p id="usercontact"> ${user.email} | <div id="userinsta"> </div> </p>
+                    <hr>
+                    <p class="username">
+                    <span class="user-firstname">${user.firstName}</span>
+                    <span class="user-lastname">${user.lastName ? user.lastName : ""}</span>
+                    <span class="user-year">| ${user.year}</span>
+                    </p>
+                    <p class="user-major">Primary Major: ${user.major}</p>
+                    <h3 class="user-aboutme">About Me:</h3>
+                    <p class="user-description">${user.description ? user.description : ""}</p>
+                    <p class="user-contact">${user.email} ${user.insta ? "| @" + user.insta + " on instagram" : ""}</p>
                     <hr>
             `;
-            const userDivLastName = document.getElementById("userlastname");
-            const userDivDescription = document.getElementById("userdescription");
-            const userDivInsta = document.getElementById("userinsta");
+            const userDivLastName = userDiv.querySelector("#userlastname");
+            const userDivDescription = userDiv.querySelector("#userdescription");
+            const userDivInsta = userDiv.querySelector("#userinsta");
             
-            if (!user.lastName==undefined){
-                userDivLastName.innerHTML= `
-                    ${user.lastName}
-                `;
-            }
-            if (!user.description==undefined){
-                userDivDescription.innerHTML= `
-                ${user.description}
-            `;
-            }
-            if (!user.insta==undefined){
-                userDivInsta.innerHTML= `
-                ${user.insta}
-            `;
-            matchedUsers.appendChild(userDiv);
-
-            }
+            mainContent.appendChild(userDiv);
 
         }})}
 
