@@ -8,8 +8,8 @@ export default class Database {
                     year: 'Sophomore',
                     major: 'Computer Science',
                     description: 'About me',
-                    personality: "", // Example personality value
-                    phone_number: ''
+                    insta: '',
+                    email: ''
                 },
                 { //User 2
                     firstName: 'Malia',
@@ -17,18 +17,16 @@ export default class Database {
                     year: 'Sophomore',
                     major: 'Information Systems',
                     description: 'About me',
-                    personality: "", // Example personality value
-                    phone_number: '',
+                    insta: '',
                     email: ''
-
                 },
                 { //User 3
                     firstName: 'Charlotte',
                     lastName: '',
                     year: 'Sophomore',
                     major: 'Computer Science',
-                    description: 'About me',
-                    phone_number: '',
+                    description: 'About me', 
+                    insta: '',
                     email: ''
                 },
                 { //User 4
@@ -37,7 +35,7 @@ export default class Database {
                     year: 'Sophomore',
                     major: ['Information Systems'],
                     description: 'About me',
-                    phone_number: '',
+                    insta: ''.
                     email: ''
                 }
             ],
