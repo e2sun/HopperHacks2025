@@ -21,7 +21,7 @@
   
   /* Navigation Banner */
   .nav-banner {
-    background-color: #d9d9d9;
+    background-color: #00549a;
     padding: 20px 0;
   }
   .nav-banner nav ul {
@@ -35,9 +35,8 @@
   }
   .nav-banner nav ul li a {
     text-decoration: none;
-    color: #1e1e1e;
-    font-weight: 600;
-    font-size: 1rem;
+    color: #fcf8f2;
+    font-size: 20px;
     text-transform: lowercase;
   }
   
@@ -223,3 +222,27 @@
     margin-bottom: 10px;
   }
   
+  .wolfiePics {
+    width: 300px;
+  }
+
+  .infoDivs {
+    display: flex;
+    margin-left: 30%;
+    border: dotted #00549a;
+    border-radius: 25px;
+    margin-bottom: 10px;
+    width: 600px;
+  }
+
+  .writtenInfo {
+    margin-top: 20px;
+  }
+
+  .writtenHeader {
+    text-align: center;
+  }
+
+  #contact-information_header {
+    font-size: 30px;
+  }
