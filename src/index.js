@@ -76,6 +76,7 @@ wolfieHeadButton.addEventListener("click", loadHomePage);
 function loadQuizStart() {
     clearQuiz();
     mainContent.innerHTML = `
+        <div id="start_quiz_page">
         <div id="start_quiz">
         <h1 class="red_heading"> Are you ready... </h1>
         <p id="are_you_ready_description"> For each question, choose the option that resonates the most with you. At the end of the quiz, you will get matched
@@ -83,6 +84,7 @@ function loadQuizStart() {
         personality type as you, add yourself as a user and meet with other seawolves! Refer to "wolfie types" in the navbar to 
         view the different types of wolfie personalities. Good luck!</p>
         <button id="startQuiz-btn"> Start Quiz </button>
+        </div>
         </div>
     `;
     
