@@ -67,8 +67,15 @@ wolfieTypeButtons.addEventListener("click", loadWolfieType);
 function loadQuizStart() {
     clearQuiz();
     mainContent.innerHTML = `
-        <h1> QUIZ INTRO </h1>
-        <button id="startQuiz-btn">Start Quiz</button>
+
+        <div id="start_quiz">
+        <h1 class="red_heading"> Are you ready... </h1>
+        <p id="are_you_ready_description"> For each question, choose the option that resonates the most with you. At the end of the quiz, you will get matched
+        with the Wolfie that best matches your personality. If you want to get in touch with other Seawolves that have the same
+        personality type as you, add yourself as a user and meet with other seawolves! Refer to "wolfie types" in the navbar to 
+        view the different types of wolfie personalities. Good luck!</p>
+        <button id="startQuiz-btn"> Start Quiz </button>
+        </div>
     `;
 
     const startQuizButton = document.getElementById("startQuiz-btn");
