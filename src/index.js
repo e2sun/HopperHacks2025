@@ -396,7 +396,7 @@ function loadWolfieType() {
     mainContent.innerHTML = `
         <h1 class="red_heading">All Possible Types</h1>
         <div class="infoDivs" id="helloKittyInfo">
-            <img id="helloKittyWolfie" class="wolfiePics" src="hello_kitty_wolfie.png" alt="Hello Kitty Wolfie">
+            <img id="helloKittyWolfie" class="wolfiePics" src="img/hello_kitty_wolfie.png" alt="Hello Kitty Wolfie">
             <div class="writtenInfo" id="helloKittyInnerInfo">
                 <h3 class="writtenHeader">Hello Wolfie</h3>
                 <ul>
@@ -411,7 +411,7 @@ function loadWolfieType() {
         </div>
 
         <div class="infoDivs" id="kirbyInfo">
-            <img id="kirbyWolfie" class="wolfiePics" src="kirby_wolfie.png" alt="Pirate Wolfie">
+            <img id="kirbyWolfie" class="wolfiePics" src="img/kirby_wolfie.png" alt="Pirate Wolfie">
             <div class="writtenInfo" id="kirbyInnerInfo">
                 <h3 class="writtenHeader">Kirfie</h3>
                 <ul>
@@ -426,7 +426,7 @@ function loadWolfieType() {
         </div>
         
         <div class="infoDivs" id="pirateInfo">
-            <img id="pirateWolfie" class="wolfiePics" src="pirate_wolfie.png" alt="Kirby Wolfie">
+            <img id="pirateWolfie" class="wolfiePics" src="img/pirate_wolfie.png" alt="Kirby Wolfie">
             <div class="writtenInfo" id="pirateInnerInfo">
                 <h3 class="writtenHeader">Pirawolf</h3>
                 <ul>
