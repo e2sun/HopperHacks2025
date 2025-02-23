@@ -21,6 +21,7 @@
 
   
   /* Navigation Banner */
+
 .nav-banner {
     background-color: #00549a; /* Wolfie blue */
     height: 100px;
@@ -47,6 +48,14 @@
 
 /* Navigation Links */
 .nav-links {
+
+  .nav-banner {
+    background-color: #00549a;
+    padding: 20px 0;
+  }
+  .nav-banner nav ul {
+    list-style: none;
+
     display: flex;
     flex-grow: 1;
     justify-content: space-evenly;
@@ -69,6 +78,7 @@
     height: 100px; /* Matches navbar height */
     line-height: 100px; /* Vertically centers text */
     text-decoration: none;
+
     font-size: 25px;
     font-weight: bold;
     color: #fcf8f2;
@@ -79,6 +89,13 @@
 .nav-links li a:hover {
     background-color: #003366; /* Darker shade for hover effect */
 }
+
+
+    color: #fcf8f2;
+    font-size: 20px;
+    text-transform: lowercase;
+  }
+  
 
   /* Homepage Section */
   .homepage {
@@ -263,6 +280,7 @@
     margin-bottom: 10px;
   }
   
+
   /*TAKE QUIZ*/
   #are_you_ready_description {
     padding-top: 20px;
@@ -299,7 +317,33 @@
     transition: background-color 0.3s ease;
 }
 
-/* Hover Effect for Better UX */
+
 #startQuiz-btn:hover {
     background-color: #003366;
 }
+
+  .wolfiePics {
+    width: 300px;
+  }
+
+  .infoDivs {
+    display: flex;
+    margin-left: 30%;
+    border: dotted #00549a;
+    border-radius: 25px;
+    margin-bottom: 10px;
+    width: 600px;
+  }
+
+  .writtenInfo {
+    margin-top: 20px;
+  }
+
+  .writtenHeader {
+    text-align: center;
+  }
+
+  #contact-information_header {
+    font-size: 30px;
+  }
+

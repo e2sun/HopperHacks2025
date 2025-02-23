@@ -6,8 +6,6 @@ let quizResult = 0;
 const mainContent = document.getElementById('main');
 let indexCounter = 0;
 
-
-
 const results = [{answer: 1, count: 0},
                  {answer: 2, count: 0},
                  {answer: 3, count: 0},
@@ -68,6 +66,7 @@ function loadQuizStart() {
     clearQuiz();
     mainContent.innerHTML = `
 
+
         <div id="start_quiz">
         <h1 class="red_heading"> Are you ready... </h1>
         <p id="are_you_ready_description"> For each question, choose the option that resonates the most with you. At the end of the quiz, you will get matched
@@ -76,7 +75,8 @@ function loadQuizStart() {
         view the different types of wolfie personalities. Good luck!</p>
         <button id="startQuiz-btn"> Start Quiz </button>
         </div>
-    `;
+
+    
 
     const startQuizButton = document.getElementById("startQuiz-btn");
     startQuizButton.addEventListener("click", loadQuestions);
@@ -202,8 +202,8 @@ function clearQuiz() {
 function loadCreateUser(){
     mainContent.innerHTML = `
         <div class="contact-information">
-    <div id="contact-information_header"> <h1> Contact Information </h1> </div>
-    <form id="contact-information_form" action="/send" method="POST">
+        <div class="red_heading" id="contact-information_header"> <h1> Contact Information </h1> </div>
+        <form id="contact-information_form" action="/send" method="POST">
         
         <label class = contact_prompt> <h3> First Name (required, max 100 characters) </h3> </label>
         <input id="firstName" type="text" placeholder="First Name (required, max 100 characters)" onfocus="this.placeholder=''"> 
@@ -324,7 +324,7 @@ function loadCreateUser(){
                         insta: insta.value
                     };
                 
-                    console.log(newUser);
+                    loadMatchUser();
                     users.push(newUser);
 
                     alert("You can now be matched with other seawolfs!");
@@ -343,10 +343,7 @@ function loadCreateUser(){
                     email.value="";
                     if (!insta==undefined){
                         insta.value="";
-                    }
-
-                    
-                    loadMatchUser();
+                    }                    
                 }
       
   });}
@@ -404,6 +401,50 @@ function loadMatchUser(){
 // WOLFIE TYPE PAGE
 function loadWolfieType() {
     mainContent.innerHTML = `
-        <h1 class="red_heading">add in wolfie types</h1>
+        <h1 class="red_heading">all possible types</h1>
+        <div class="infoDivs" id="helloKittyInfo">
+            <img id="helloKittyWolfie" class="wolfiePics" src="hello_kitty_wolfie.png" alt="Hello Kitty Wolfie">
+            <div class="writtenInfo" id="helloKittyInnerInfo">
+                <h3 class="writtenHeader">Hello Kitty Wolfie (FIX NAME)</h3>
+                <ul>
+                    <li>Unexpectedly sweet</li>
+                    <li>Making cupcakes at 2AM</li>
+                    <li>Always helping strangers</li>
+                    <li>The mom of the group</li>
+                    <li>Will bite if you cross her</li>
+                    <li>Is always down to do something</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="infoDivs" id="kirbyInfo">
+            <img id="kirbyWolfie" class="wolfiePics" src="kirby_wolfie.png" alt="Pirate Wolfie">
+            <div class="writtenInfo" id="kirbyInnerInfo">
+                <h3 class="writtenHeader">Kirby Wolfie(FIX NAME)</h3>
+                <ul>
+                    <li></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="infoDivs" id="pirateInfo">
+            <img id="pirateWolfie" class="wolfiePics" src="pirate_wolfie.png" alt="Kirby Wolfie">
+            <div class="writtenInfo" id="pirateInnerInfo">
+                <h3 class="writtenHeader">Pirate Wolfie(FIX NAME)</h3>
+                <ul>
+                    <li></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="infoDivs" id="hopperInfo">
+            <!--<img id="hopperWolfie" class="wolfiePics" src="hopper_wolfie.png" alt="Hopper Wolfie">-->
+            <div class="writtenInfo" id="hopperInnerInfo">
+                <h3 class="writtenHeader">Hopper Wolfie(FIX NAME)</h3>
+                <ul>
+                    <li></li>
+                </ul>
+            </div>
+        </div>
     `;
 }
