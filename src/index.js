@@ -38,6 +38,8 @@ function loadHomePage() {
         <section class="homepage">
         <div class="homepage-content">
             <h1 class="red_heading">What Type of Seawolf are You?</h1>
+            <img id="standard_wolfie" src="standard_wolfie.png" alt="Drawn image of Wolfie">
+            <br>
             <button id="quiz-btn">take the quiz</button>
         </div>
         <div class="wolfie-image">
@@ -165,34 +167,32 @@ function loadResults(){
         <h1 class="congrats">Congratulations!</h1>
         <h2 id="you_are">You are...</h2>
         <div id="results"></div>
+        <div id="createUser-div">
         <button id="createUser-btn">Create User</button>
+        </div>
     `;
     const shareResult = document.getElementById("results");
     if(results[0].count == results[1].count && results[2].count == results[3].count && results[0].count == results[3].count){
-        // shareResult.innerHTML = `
-        //     result: you are... SUPER WOLFIE!!!!
-        // `;
-        // quizResult = 0;
+        shareResult.innerHTML = `
+            <!--<img id="superWolfieResult" class="wolfieResults" src="superWolfie_result.png" alt="a Super Wolfie!!">-->
+        `;
+        quizResult = 0;
     } else if(quizResult === 1){
-        // shareResult.innerHTML = `
-        //     <img class = "share_results", src = alt=>
-            
-        // `;
+        shareResult.innerHTML = `
+            <!--<img id="helloKittyResult" class="wolfieResults" src="helloKitty_result.png" alt="a Hello Kitty Wolfie!!">-->
+        `;
     } else if(quizResult === 2){
-        // shareResult.innerHTML = `
-        //     <img class = "share_results", src = alt=>
-            
-        // `;
+        shareResult.innerHTML = `
+            <!--<img id="kirbyWolfieResult" class="wolfieResults" src="kirby_result.png" alt="a Kirby Wolfie!!">-->
+        `;
     } else if(quizResult === 3){
-        // shareResult.innerHTML = `
-        //     <img class = "share_results", src = alt=>
-            
-        // `;
+        shareResult.innerHTML = `
+            <!--<img id="hopperWolfieResult" class="wolfieResults" src="hopper_result.png" alt="a Hopper Wolfie!!">-->
+        `;
     } else {
-        // shareResult.innerHTML = `
-        //     <img class = "share_results", src = alt=>
-            
-        // `;
+        shareResult.innerHTML = `
+            <!--<img id="pirateWolfieResult" class="wolfieResults" src="pirate_result.png" alt="a Pirate Wolfie!!">-->
+        `;
     }
     const createUser = document.getElementById("createUser-btn");
     createUser.addEventListener("click", loadCreateUser);
@@ -400,7 +400,7 @@ function loadWolfieType() {
         <div class="infoDivs" id="helloKittyInfo">
             <img id="helloKittyWolfie" class="wolfiePics" src="img/hello_kitty_wolfie.png" alt="Hello Kitty Wolfie">
             <div class="writtenInfo" id="helloKittyInnerInfo">
-                <h3 class="writtenHeader">Hello Kitty Wolfie (FIX NAME)</h3>
+                <h3 class="writtenHeader">Hello Wolfie</h3>
                 <ul>
                     <li>Unexpectedly sweet</li>
                     <li>Making cupcakes at 2AM</li>
@@ -415,9 +415,14 @@ function loadWolfieType() {
         <div class="infoDivs" id="kirbyInfo">
             <img id="kirbyWolfie" class="wolfiePics" src="img/kirby_wolfie.png" alt="Pirate Wolfie">
             <div class="writtenInfo" id="kirbyInnerInfo">
-                <h3 class="writtenHeader">Kirby Wolfie(FIX NAME)</h3>
+                <h3 class="writtenHeader">Kirfie</h3>
                 <ul>
-                    <li></li>
+                    <li>Overly friendly</li>
+                    <li>Will go out of their way to help</li>
+                    <li>Strong sense of justice</li>
+                    <li>Not afraid to throw hands</li>
+                    <li>Will greet you with a smile</li>
+                    <li>Always slipping and falling</li>
                 </ul>
             </div>
         </div>
@@ -425,19 +430,29 @@ function loadWolfieType() {
         <div class="infoDivs" id="pirateInfo">
             <img id="pirateWolfie" class="wolfiePics" src="img/pirate_wolfie.png" alt="Kirby Wolfie">
             <div class="writtenInfo" id="pirateInnerInfo">
-                <h3 class="writtenHeader">Pirate Wolfie(FIX NAME)</h3>
+                <h3 class="writtenHeader">Pirawolf</h3>
                 <ul>
-                    <li></li>
+                    <li>Never backs down from a challenge</li>
+                    <li>Always down for an adventure</li>
+                    <li>Secretly cares a lot for others</li>
+                    <li>Always has the most crazy stories</li>
+                    <li>Never catches a break</li>
+                    <li>Has a soft spot for cute animals</li>
                 </ul>
             </div>
         </div>
 
         <div class="infoDivs" id="hopperInfo">
-            <!--<img id="hopperWolfie" class="wolfiePics" src="hopper_wolfie.png" alt="Hopper Wolfie">-->
+            <img id="hopperWolfie" class="wolfiePics" src="hopper_wolfie.png" alt="Hopper Wolfie">
             <div class="writtenInfo" id="hopperInnerInfo">
-                <h3 class="writtenHeader">Hopper Wolfie(FIX NAME)</h3>
+                <h3 class="writtenHeader">Hopfie</h3>
                 <ul>
-                    <li></li>
+                    <li>Does not stop talking</li>
+                    <li>Nocturnal</li>
+                    <li>Always finding new ways to have fun</li>
+                    <li>The child of the group</li>
+                    <li>Will plot your downfall</li>
+                    <li>Attached to their computer</li>
                 </ul>
             </div>
         </div>
