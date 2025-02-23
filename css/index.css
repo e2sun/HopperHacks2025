@@ -11,7 +11,6 @@
     line-height: 1.6;
     background-color: #fcf8f2;
   }
-  
   /* Container for Layout */
   .container {
     width: 90%;
@@ -336,4 +335,16 @@
 /* Hover Effect for Better UX */
 #startQuiz-btn:hover {
   background-color: #003366;
+}
+
+/* Submit button */
+#submit_information {
+  background-color: #00549a;
+  color: #fcfcfc;
+  width: 200px;
+  height: 50px;
+  margin-bottom: 15px;
+  font-family: 'Irish Grover', 'serif';
+  border-color: #00549a;
+  border-radius: 25px;
 }
