@@ -37,7 +37,7 @@ function loadHomePage() {
     mainContent.innerHTML = `
         <section class="homepage">
         <div class="homepage-content">
-            <h1 class="red_heading">what type of seawolf are you?</h1>
+            <h1 class="red_heading">What Type of Seawolf are You?</h1>
             <button id="quiz-btn">take the quiz</button>
         </div>
         <div class="wolfie-image">
@@ -160,32 +160,37 @@ function loadResults(){
     results.sort(function(a,b){return a.count - b.count});
     quizResult = results[3].answer;
     mainContent.innerHTML = `
-        <h1>CONGRATS you filled out the forms</h1>
-        <p id="results"> result: you are... <p>
+        <h1 class="congrats">Congratulations!</h1>
+        <h2 id="you_are">You are...</h2>
+        <div id="results"></div>
         <button id="createUser-btn">Create User</button>
     `;
     const shareResult = document.getElementById("results");
     if(results[0].count == results[1].count && results[2].count == results[3].count && results[0].count == results[3].count){
-        shareResult.innerHTML = `
-            result: you are... SUPER WOLFIE!!!!
-        `;
-        quizResult = 0;
+        // shareResult.innerHTML = `
+        //     result: you are... SUPER WOLFIE!!!!
+        // `;
+        // quizResult = 0;
     } else if(quizResult === 1){
-        shareResult.innerHTML = `
-            result: you are... NUMBER 1
-        `;
+        // shareResult.innerHTML = `
+        //     <img class = "share_results", src = alt=>
+            
+        // `;
     } else if(quizResult === 2){
-        shareResult.innerHTML = `
-            result: you are... NUMBER 2
-        `;
+        // shareResult.innerHTML = `
+        //     <img class = "share_results", src = alt=>
+            
+        // `;
     } else if(quizResult === 3){
-        shareResult.innerHTML = `
-            result: you are... NUMBER 3
-        `;
+        // shareResult.innerHTML = `
+        //     <img class = "share_results", src = alt=>
+            
+        // `;
     } else {
-        shareResult.innerHTML = `
-            result: you are... NUMBER 4
-        `;
+        // shareResult.innerHTML = `
+        //     <img class = "share_results", src = alt=>
+            
+        // `;
     }
     const createUser = document.getElementById("createUser-btn");
     createUser.addEventListener("click", loadCreateUser);
@@ -239,7 +244,7 @@ function loadCreateUser(){
         <input id="instagram" type="text" placeholder="Instagram Username" (optional, max 100 characters)" onfocus="this.placeholder=''">
         <div id="consent_form">
             <label for="consent">I consent to my information being shared with other students.</label>
-            <input type="checkbox" id="consent" name="consent" checked />
+            <input type="checkbox" id="consent" name="consent"  />
         </div>
        
         <input id="submit_information" type="submit" value="Submit Information">
@@ -389,7 +394,7 @@ function loadMatchUser(){
 // WOLFIE TYPE PAGE
 function loadWolfieType() {
     mainContent.innerHTML = `
-        <h1 class="red_heading">all possible types</h1>
+        <h1 class="red_heading">All Possible Types</h1>
         <div class="infoDivs" id="helloKittyInfo">
             <img id="helloKittyWolfie" class="wolfiePics" src="hello_kitty_wolfie.png" alt="Hello Kitty Wolfie">
             <div class="writtenInfo" id="helloKittyInnerInfo">
