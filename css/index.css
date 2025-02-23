@@ -40,6 +40,10 @@
   width: 150px;
 }
 
+#standard_wolfie {
+  width: 300px;
+}
+
 
 /* Navigation Bar */
 .nav {
@@ -359,13 +363,15 @@
     font-family: 'Irish Grover', 'serif';
     cursor: pointer;
     transition: background-color 0.3s ease;
-    margin-left: 175px;
-  
+  }
+
+  #createUser-div {
+    justify-content: center;
+    display: flex;
   }
   /* .share_results{
 
   } */
-
 
 /* Submit button */
 #submit_information {
