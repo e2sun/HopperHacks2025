@@ -28,7 +28,7 @@ export const questions = [
 
     { // question object 4
         questionID: 'question4',
-        question: 'What is your preferred class environment',
+        question: 'What is your preferred class environment?',
         answer1: 'Small, creative-based classes',
         answer2: 'Large lecture halls with dynamic speakers',
         answer3: 'Hands on labs with practical experiences',
