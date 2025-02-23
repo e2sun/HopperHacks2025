@@ -92,7 +92,7 @@
   
   /* Homepage Section */
   .homepage {
-    background-color: #fcf8f2;
+/* background-color: #fcf8f2; */
     position: relative;
     display: flex;
     flex-direction: column;
@@ -383,5 +383,18 @@
   font-family: 'Irish Grover', 'serif';
   border-color: #00549a;
   border-radius: 25px;
+}
+
+
+/* Background image */
+
+#backgroundImage {
+    position: fixed;
+    top: 0;
+    left: 0;
+    
+    object-fit: cover;
+    opacity: 0.6; /* Adjust as needed */
+    z-index: -1;
 }
 
