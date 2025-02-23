@@ -398,7 +398,7 @@ function loadWolfieType() {
         <div class="infoDivs" id="helloKittyInfo">
             <img id="helloKittyWolfie" class="wolfiePics" src="hello_kitty_wolfie.png" alt="Hello Kitty Wolfie">
             <div class="writtenInfo" id="helloKittyInnerInfo">
-                <h3 class="writtenHeader">Hello Kitty Wolfie (FIX NAME)</h3>
+                <h3 class="writtenHeader">Hello Wolfie</h3>
                 <ul>
                     <li>Unexpectedly sweet</li>
                     <li>Making cupcakes at 2AM</li>
@@ -413,9 +413,14 @@ function loadWolfieType() {
         <div class="infoDivs" id="kirbyInfo">
             <img id="kirbyWolfie" class="wolfiePics" src="kirby_wolfie.png" alt="Pirate Wolfie">
             <div class="writtenInfo" id="kirbyInnerInfo">
-                <h3 class="writtenHeader">Kirby Wolfie(FIX NAME)</h3>
+                <h3 class="writtenHeader">Kirfie</h3>
                 <ul>
-                    <li></li>
+                    <li>Overly friendly</li>
+                    <li>Will go out of their way to help</li>
+                    <li>Strong sense of justice</li>
+                    <li>Not afraid to throw hands</li>
+                    <li>Will greet you with a smile</li>
+                    <li>Always slipping and falling</li>
                 </ul>
             </div>
         </div>
@@ -423,19 +428,29 @@ function loadWolfieType() {
         <div class="infoDivs" id="pirateInfo">
             <img id="pirateWolfie" class="wolfiePics" src="pirate_wolfie.png" alt="Kirby Wolfie">
             <div class="writtenInfo" id="pirateInnerInfo">
-                <h3 class="writtenHeader">Pirate Wolfie(FIX NAME)</h3>
+                <h3 class="writtenHeader">Pirawolf</h3>
                 <ul>
-                    <li></li>
+                    <li>Never backs down from a challenge</li>
+                    <li>Always down for an adventure</li>
+                    <li>Secretly cares a lot for others</li>
+                    <li>Always has the most crazy stories</li>
+                    <li>Never catches a break</li>
+                    <li>Has a soft spot for cute animals</li>
                 </ul>
             </div>
         </div>
 
         <div class="infoDivs" id="hopperInfo">
-            <!--<img id="hopperWolfie" class="wolfiePics" src="hopper_wolfie.png" alt="Hopper Wolfie">-->
+            <img id="hopperWolfie" class="wolfiePics" src="hopper_wolfie.png" alt="Hopper Wolfie">
             <div class="writtenInfo" id="hopperInnerInfo">
-                <h3 class="writtenHeader">Hopper Wolfie(FIX NAME)</h3>
+                <h3 class="writtenHeader">Hopfie</h3>
                 <ul>
-                    <li></li>
+                    <li>Does not stop talking</li>
+                    <li>Nocturnal</li>
+                    <li>Always finding new ways to have fun</li>
+                    <li>The child of the group</li>
+                    <li>Will plot your downfall</li>
+                    <li>Attached to their computer</li>
                 </ul>
             </div>
         </div>
