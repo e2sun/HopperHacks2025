@@ -100,12 +100,14 @@
     text-align: center;
     margin-bottom: 40px;
   }
-  .red_heading {
+  .red_heading, .congrats {
     font-size: 48px;
+    margin-top: 20px;
     margin-bottom: 20px;
     letter-spacing: 1px;
     color:#b70000;
     text-align: center;
+
   }
   #quiz-btn {
     background-color:#b70000;
@@ -170,7 +172,7 @@
     background-color: #00549a;
     color: #ffffff;
     font-size: 20px;
-    width: 400px;
+    width: 500px;
     height: 85px;
     border-color:  #00549a;
     border-radius: 25px;
@@ -226,6 +228,7 @@
     justify-content: space-between;
 
 }
+
 #submit_information{
     width: 10%;
     height: 30%;
@@ -330,6 +333,7 @@
   font-family: 'Irish Grover', 'serif';
   cursor: pointer;
   transition: background-color 0.3s ease;
+
 }
 
 
@@ -337,3 +341,28 @@
 #startQuiz-btn:hover {
   background-color: #003366;
 }
+
+/* Congrats Form */
+#you_are{
+    text-align: center;
+}
+
+#createUser-btn {
+    margin-top: 50px;
+    background-color: #00549a;
+    color: #ffffff;
+    font-size: 20px;
+    width: 400px;
+    height: 70px;
+    border: none;
+    border-radius: 25px;
+    font-family: 'Irish Grover', 'serif';
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: 175px;
+  
+  }
+  /* .share_results{
+
+  } */
+
