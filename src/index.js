@@ -40,17 +40,7 @@ function loadHomePage() {
             <h1 class="red_heading">What Type of Seawolf are You?</h1>
             <img id="standard_wolfie" src="standard_wolfie.png" alt="Drawn image of Wolfie">
             <br>
-            <button id="quiz-btn">take the quiz</button>
-        </div>
-        <div class="wolfie-image">
-            <!-- wolfie image -->
-            <!--<img src="wolfie.png" alt="drawn image of wolfie">-->
-        </div>
-        <!-- Decorative Paw Icons -->
-        <div class="paw-container">
-            <!-- actual paw image files -->
-            <!--<img src="paw1.png" alt="paw icon" class="paw paw-top-left">
-            <img src="paw2.png" alt="paw icon" class="paw paw-bottom-right">-->
+            <button id="quiz-btn">Take the Quiz</button>
         </div>
         </section>
     `;
@@ -174,24 +164,24 @@ function loadResults(){
     const shareResult = document.getElementById("results");
     if(results[0].count == results[1].count && results[2].count == results[3].count && results[0].count == results[3].count){
         shareResult.innerHTML = `
-            <!--<img id="superWolfieResult" class="wolfieResults" src="superWolfie_result.png" alt="a Super Wolfie!!">-->
+            <img id="superWolfieResult" class="wolfieResults" src="superWolfie_result.png" alt="a Super Wolfie!!">
         `;
         quizResult = 0;
     } else if(quizResult === 1){
         shareResult.innerHTML = `
-            <!--<img id="helloKittyResult" class="wolfieResults" src="helloKitty_result.png" alt="a Hello Kitty Wolfie!!">-->
+            <img id="helloKittyResult" class="wolfieResults" src="helloKitty_result.png" alt="a Hello Kitty Wolfie!!">
         `;
     } else if(quizResult === 2){
         shareResult.innerHTML = `
-            <!--<img id="kirbyWolfieResult" class="wolfieResults" src="kirby_result.png" alt="a Kirby Wolfie!!">-->
+            <img id="kirbyWolfieResult" class="wolfieResults" src="kirby_result.png" alt="a Kirby Wolfie!!">
         `;
     } else if(quizResult === 3){
         shareResult.innerHTML = `
-            <!--<img id="hopperWolfieResult" class="wolfieResults" src="hopper_result.png" alt="a Hopper Wolfie!!">-->
+            <img id="hopperWolfieResult" class="wolfieResults" src="hopper_result.png" alt="a Hopper Wolfie!!">
         `;
     } else {
         shareResult.innerHTML = `
-            <!--<img id="pirateWolfieResult" class="wolfieResults" src="pirate_result.png" alt="a Pirate Wolfie!!">-->
+            <img id="pirateWolfieResult" class="wolfieResults" src="pirate_result.png" alt="a Pirate Wolfie!!">
         `;
     }
     const createUser = document.getElementById("createUser-btn");
@@ -374,6 +364,7 @@ function loadMatchUser(){
         if (userResults==quizResult || quizResult==0){
             const userDiv = document.createElement("div");
                 userDiv.innerHTML = `
+                    <div class="showUser">
                     <hr>
                     <p class="username">
                     <span class="user-firstname">${user.firstName}</span>
@@ -385,6 +376,7 @@ function loadMatchUser(){
                     <p class="user-description">${user.description ? user.description : ""}</p>
                     <p class="user-contact">${user.email} ${user.insta ? "| @" + user.insta + " on instagram" : ""}</p>
                     <hr>
+                    </div>
             `;
             const userDivLastName = userDiv.querySelector("#userlastname");
             const userDivDescription = userDiv.querySelector("#userdescription");
