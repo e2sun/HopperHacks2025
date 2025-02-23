@@ -75,7 +75,7 @@ function loadQuizStart() {
         view the different types of wolfie personalities. Good luck!</p>
         <button id="startQuiz-btn"> Start Quiz </button>
         </div>
-
+    `;
     
 
     const startQuizButton = document.getElementById("startQuiz-btn");

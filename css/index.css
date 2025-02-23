@@ -18,85 +18,75 @@
     max-width: 1200px;
     margin: 0 auto;
   }
-
   
   /* Navigation Banner */
-
 .nav-banner {
-    background-color: #00549a; /* Wolfie blue */
-    height: 100px;
-    display: flex;
-    align-items: center;
-    padding: 0 20px; /* Add padding for spacing */
+  background-color: #00549a; /* Wolfie blue */
+  height: 100px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px; /* Add padding for spacing */
 }
+
 
 .container {
-    display: flex;
-    align-items: center;
-    width: 100%;
+  display: flex;
+  align-items: center;
+  width: 100%;
 }
+
 
 /* Wolfie Head Logo */
 #wolfiehead {
-    width: 150px;
+  width: 150px;
 }
+
 
 /* Navigation Bar */
 .nav {
-    flex-grow: 1;
+  flex-grow: 1;
 }
+
 
 /* Navigation Links */
 .nav-links {
-
-  .nav-banner {
-    background-color: #00549a;
-    padding: 20px 0;
-  }
-  .nav-banner nav ul {
-    list-style: none;
-
-    display: flex;
-    flex-grow: 1;
-    justify-content: space-evenly;
-    align-items: center;
-    padding: 0;
-    margin: 0;
-    list-style: none;
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
+
 
 /* Individual Nav Items */
 .nav-links li {
-    flex-grow: 1;
-    text-align: center;
+  flex-grow: 1;
+  text-align: center;
 }
+
 
 /* Nav Links Style */
 .nav-links li a {
-    display: block;
-    width: 100%;
-    height: 100px; /* Matches navbar height */
-    line-height: 100px; /* Vertically centers text */
-    text-decoration: none;
-
-    font-size: 25px;
-    font-weight: bold;
-    color: #fcf8f2;
-    text-align: center;
+  display: block;
+  width: 100%;
+  height: 100px; /* Matches navbar height */
+  line-height: 100px; /* Vertically centers text */
+  text-decoration: none;
+  font-size: 25px;
+  font-weight: bold;
+  color: #fcf8f2;
+  text-align: center;
 }
+
 
 /* Hover Effect */
 .nav-links li a:hover {
-    background-color: #003366; /* Darker shade for hover effect */
+  background-color: #003366; /* Darker shade for hover effect */
 }
 
-
-    color: #fcf8f2;
-    font-size: 20px;
-    text-transform: lowercase;
-  }
   
-
   /* Homepage Section */
   .homepage {
     background-color: #fcf8f2;
@@ -111,9 +101,8 @@
     margin-bottom: 40px;
   }
   .red_heading {
-    margin-top: 20px;
     font-size: 48px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     letter-spacing: 1px;
     color:#b70000;
     text-align: center;
@@ -124,7 +113,7 @@
     border: none;
     padding: 15px 40px;
     border-radius: 30px;
-    font-size: 20px;
+    font-size: 1.1rem;
     font-weight: 600;
     cursor: pointer;
     font-family: 'Irish Grover', 'serif';
@@ -181,7 +170,7 @@
     background-color: #00549a;
     color: #ffffff;
     font-size: 20px;
-    width: 450px;
+    width: 400px;
     height: 85px;
     border-color:  #00549a;
     border-radius: 25px;
@@ -280,48 +269,6 @@
     margin-bottom: 10px;
   }
   
-
-  /*TAKE QUIZ*/
-  #are_you_ready_description {
-    padding-top: 20px;
-    padding-left: 70px; 
-    padding-right: 70px; 
-    text-align: center;
-    font-size: 25px;
-    max-width: 1300px; /* Restricts width for better readability */
-    margin: auto; /* Centers the paragraph */
-}
-
-/* Centering the Start Quiz Section */
-#start_quiz {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    max-width: 1300px; 
-    margin: auto;
-}
-
-/* Button Styling */
-#startQuiz-btn {
-    margin-top: 50px;
-    background-color: #00549a;
-    color: #ffffff;
-    font-size: 20px;
-    width: 400px;
-    height: 70px;
-    border: none;
-    border-radius: 25px;
-    font-family: 'Irish Grover', 'serif';
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-
-#startQuiz-btn:hover {
-    background-color: #003366;
-}
-
   .wolfiePics {
     width: 300px;
   }
@@ -347,3 +294,46 @@
     font-size: 30px;
   }
 
+   /*TAKE QUIZ*/
+ #are_you_ready_description {
+  padding-top: 20px;
+  padding-left: 70px;
+  padding-right: 70px;
+  text-align: center;
+  font-size: 25px;
+  max-width: 1300px; /* Restricts width for better readability */
+  margin: auto; /* Centers the paragraph */
+}
+
+
+/* Centering the Start Quiz Section */
+#start_quiz {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 1300px;
+  margin: auto;
+}
+
+
+/* Button Styling */
+#startQuiz-btn {
+  margin-top: 50px;
+  background-color: #00549a;
+  color: #ffffff;
+  font-size: 20px;
+  width: 400px;
+  height: 70px;
+  border: none;
+  border-radius: 25px;
+  font-family: 'Irish Grover', 'serif';
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+
+/* Hover Effect for Better UX */
+#startQuiz-btn:hover {
+  background-color: #003366;
+}
