@@ -1,6 +1,11 @@
 // IMPORTS
-import {questions} from './questions.js' // importing the questions array
+import {questions} from './questions.js'; // importing the questions array
 let quizResult = 0;
+
+import Database from './database.js';
+const databaseInstance = new Database();
+
+const {modelUsers} = databaseInstance.data;
 
 // COMMON USE CONSTANTS
 const mainContent = document.getElementById('main');
@@ -20,8 +25,9 @@ window.onload = function(){
 }
 
 function addModel(){
-    users.forEach(user=> {
-      users.push(user);
+
+    modelUsers.forEach(user => {
+       users.push(user);
     });
 }
 
@@ -61,12 +67,13 @@ quizPageButtons.addEventListener("click", loadQuizStart);
 const wolfieTypeButtons = document.getElementById("wolfieType_button");
 wolfieTypeButtons.addEventListener("click", loadWolfieType);
 
+const wolfieHeadButton = document.getElementById("wolfiehead-link");
+wolfieHeadButton.addEventListener("click", loadHomePage);
+
 // QUIZ PAGES
 function loadQuizStart() {
     clearQuiz();
     mainContent.innerHTML = `
-
-
         <div id="start_quiz">
         <h1 class="red_heading"> Are you ready... </h1>
         <p id="are_you_ready_description"> For each question, choose the option that resonates the most with you. At the end of the quiz, you will get matched
@@ -352,7 +359,7 @@ function loadCreateUser(){
 
 //LOAD CONNECTED USERS
 function loadMatchUser(){
-    mainContent.innerHTML=`<h1 class="matchedusers" > Matched Users </h1>`;
+    mainContent.innerHTML=`<h1 id="matchedusers" class="red_heading"> Matched Users </h1>`;
     console.log(quizResult);
     users.forEach(user=> {
         const userResults = user.userResults;
@@ -379,25 +386,6 @@ function loadMatchUser(){
             mainContent.appendChild(userDiv);
 
         }})}
-
-           
-
-            // else if (!user.insta==undefined){
-            //     userDiv.innerHTML = `
-            //         <p id="username"> ${user.firstName} ${user.lastName} | ${user.year}</p>
-            //         <p id="usermajor"> Primary Major: ${user.major} </p>
-            //         <h3 class="useraboutme"> About Me</h3>
-            //         <p id="userdescription">${user.description}</h3>
-            //         <p id="useremai"> ${linkFlairContent} </p>
-            //         <p id="usercontact"> ${user.email} | ${user.insta}</p>
-            //         <hr>
-            // `   ;
-            // }
-//         }
-//     });
-// };
-//For each user in the database, go through and check if the userResults == quizResults and if it does, then show the information
-
 // WOLFIE TYPE PAGE
 function loadWolfieType() {
     mainContent.innerHTML = `

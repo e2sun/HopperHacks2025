@@ -1,15 +1,15 @@
 export default class Database {
     constructor() {
         this.data = {
-            user: [ 
+            modelUsers: [ 
                 { // User 1
                     firstName: 'Evelyn',
                     lastName: '',
                     year: 'Sophomore',
                     major: 'Computer Science',
-                    description: 'About me',
+                    description: 'I helped make this website!!',
                     insta: '',
-                    email: '',
+                    email: 'evelyn@seawolf.net',
                     userResults: 1
                 },
                 { //User 2
@@ -17,9 +17,9 @@ export default class Database {
                     lastName: '',
                     year: 'Sophomore',
                     major: 'Information Systems',
-                    description: 'About me',
+                    description: 'I helped make this website!!',
                     insta: '',
-                    email: '',
+                    email: 'malia@seawolf.net',
                     userResults: 2
                 },
                 { //User 3
@@ -27,9 +27,9 @@ export default class Database {
                     lastName: '',
                     year: 'Sophomore',
                     major: 'Computer Science',
-                    description: 'About me', 
+                    description: 'I helped make this website!!', 
                     insta: '',
-                    email: '',
+                    email: 'charlotte@seawolf.net',
                     userResults: 3
                 },
                 { //User 4
@@ -37,9 +37,9 @@ export default class Database {
                     lastName: '',
                     year: 'Sophomore',
                     major: ['Information Systems'],
-                    description: 'About me',
+                    description: 'I helped make this website!!',
                     insta: '',
-                    email: '',
+                    email: 'esther@seawolf.net',
                     userResults: 4
                 }
             ],
