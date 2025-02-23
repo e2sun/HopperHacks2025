@@ -242,9 +242,13 @@
 .matchedusers{
     margin-left: 10px;
     margin-bottom: 10px;
-    margin-top: 20px
+    margin-top: 20px;
 }
 
+.showUser{
+  display: block;
+  background-color:#fcf8f2;
+}
 
 #userdescription{
     margin-left: 10px;
@@ -377,10 +381,8 @@
   #createUser-div {
     justify-content: center;
     display: flex;
+    padding-bottom: 20px;
   }
-  /* .share_results{
-
-  } */
 
 /* Submit button */
 #submit_information {
@@ -407,3 +409,11 @@
     z-index: -1;
 }
 
+.wolfieResults{
+  width: 600px;
+}
+
+#results {
+  display: flex;
+  justify-content: center;
+}
