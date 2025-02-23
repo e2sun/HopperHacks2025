@@ -1,54 +1,46 @@
 export default class Database {
     constructor() {
         this.data = {
-            User: [ 
+            modelUsers: [ 
                 { // User 1
                     firstName: 'Evelyn',
-                    lastName: 'Sun',
+                    lastName: '',
                     year: 'Sophomore',
                     major: 'Computer Science',
-                    minor: [],
-                    specialization: ['Artifical Intelligence'],
-                    description: 'About me',
-                    personality: "", // Example personality value
+                    description: 'I helped make this website!!',
                     insta: '',
-                    email: ''
+                    email: 'evelyn@seawolf.net',
+                    userResults: 1
                 },
                 { //User 2
                     firstName: 'Malia',
-                    lastName: 'Ng',
+                    lastName: '',
                     year: 'Sophomore',
                     major: 'Information Systems',
-                    minor:['Digital Arts'],
-                    specialization: [],
-                    description: 'About me',
-                    personality: "", // Example personality value
+                    description: 'I helped make this website!!',
                     insta: '',
-                    email: ''
+                    email: 'malia@seawolf.net',
+                    userResults: 2
                 },
                 { //User 3
                     firstName: 'Charlotte',
-                    lastName: 'Cain',
+                    lastName: '',
                     year: 'Sophomore',
-                    major: ['Computer Science', 'Applied Math and Statistics'],
-                    minor: [],
-                    specialization: [],
-                    description: 'About me',
-                    personality: "", // Example personality value
+                    major: 'Computer Science',
+                    description: 'I helped make this website!!', 
                     insta: '',
-                    email: ''
+                    email: 'charlotte@seawolf.net',
+                    userResults: 3
                 },
                 { //User 4
                     firstName: 'Esther',
-                    lastName: 'Wang',
+                    lastName: '',
                     year: 'Sophomore',
                     major: ['Information Systems'],
-                    minor: [],
-                    specialization: [],
-                    description: 'About me',
-                    personality: "", // Example personality value
+                    description: 'I helped make this website!!',
                     insta: '',
-                    email: ''
+                    email: 'esther@seawolf.net',
+                    userResults: 4
                 }
             ],
         }; // End this.data object

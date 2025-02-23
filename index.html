@@ -1,19 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Which Seawolf are You?</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Seawolf Quiz</title>
+  <!-- Using Montserrat as specified in your Figma template
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">-->
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="icon" type="image/png" href="img/wolfiehead.png">
+  <!-- Irish Grover -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap" rel="stylesheet">
 </head>
 <body>
-    <class id="navbar"> 
-        <!-- Should dynamically add this, template code for now-->
-        <!-- Image of logo?-->
-        <div id="web_title"> </div>
-        <div id="personality_test"></div>
-        <div id="wolfie's personalities"></div>
-        <div id="resources"> </div>
-        <div id="take_the_test"></div>
-    </nav>
+    <!-- <style>
+        body{
+            background-image: url('img/background_paws.jpg');
+        }
+    </style> -->
+    <img id="backgroundImage" src="img/background_paws.jpg" alt="Background Paws">
+
+  <!-- Navigation Banner -->
+  <header class="nav-banner">
+    <div class="container">
+      <a id="wolfiehead-link"><img id="wolfiehead" src="img/wolfiehead.png" alt="pic of wolfie head"></a>
+      <nav class="nav">
+        <ul class="nav-links">
+          <li><a id="home_button" href="#">home page</a></li>
+          <li><a id="quiz_button" href="#">take quiz</a></li>
+          <li><a id="wolfieType_button" href="#">wolfie types</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <!-- Main Content -->
+   <!-- THIS CODE SHOULD BE DYNAMICALLY DDED WITH JAVASCRIPT -->
+  <div id='main'>
+    
+    </div>
+
+    <script type="module" src="src/index.js"></script>
 </body>
 </html>

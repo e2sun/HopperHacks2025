@@ -1,0 +1,419 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    /*font-family: 'Montserrat', sans-serif;*/
+    font-family: 'Irish Grover', 'serif';
+    color: #1e1e1e;
+    line-height: 1.6;
+    background-color: #fcf8f2;
+  }
+  /* Container for Layout */
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Navigation Banner */
+.nav-banner {
+  background-color: #00549a; /* Wolfie blue */
+  height: 100px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px; /* Add padding for spacing */
+}
+
+
+.container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+
+/* Wolfie Head Logo */
+#wolfiehead {
+  width: 150px;
+}
+
+#standard_wolfie {
+  width: 300px;
+}
+
+
+/* Navigation Bar */
+.nav {
+  flex-grow: 1;
+}
+
+
+/* Navigation Links */
+.nav-links {
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+
+/* Individual Nav Items */
+.nav-links li {
+  flex-grow: 1;
+  text-align: center;
+}
+
+
+/* Nav Links Style */
+.nav-links li a {
+  display: block;
+  width: 100%;
+  height: 100px; /* Matches navbar height */
+  line-height: 100px; /* Vertically centers text */
+  text-decoration: none;
+  font-size: 25px;
+  font-weight: bold;
+  color: #fcf8f2;
+  text-align: center;
+}
+
+
+/* Hover Effect */
+.nav-links li a:hover {
+  background-color: #003366; /* Darker shade for hover effect */
+}
+
+  
+  /* Homepage Section */
+  .homepage {
+/* background-color: #fcf8f2; */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 20px;
+  }
+  .homepage-content {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .red_heading, .congrats {
+    font-size: 48px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    color:#b70000;
+    text-align: center;
+
+  }
+  #quiz-btn {
+    background-color:#b70000;
+    color: #ffffff;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: 'Irish Grover', 'serif';
+  }
+  .quiz-btn:hover {
+    background: linear-gradient(90deg, #00f2fe, #4facfe);
+  }
+  .wolfie-image img {
+    max-width: 100%;
+    width: 400px; /* Adjust based on your design scale */
+    height: auto;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Paw Icons */
+  .paw-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+  .paw {
+    position: absolute;
+    width: 50px; /* Adjust size as needed */
+    opacity: 0.8;
+  }
+  .paw-top-left {
+    top: 10%;
+    left: 5%;
+    transform: rotate(-15deg);
+  }
+  .paw-bottom-right {
+    bottom: 10%;
+    right: 5%;
+    transform: rotate(15deg);
+  }
+  
+  #question_header {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
+  }
+
+  #answer_list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .answer_button{
+    margin: 10px;
+    background-color: #00549a;
+    color: #ffffff;
+    font-size: 20px;
+    width: 500px;
+    height: 85px;
+    border-color:  #00549a;
+    border-radius: 25px;
+    font-family: 'Irish Grover', 'serif';
+  }
+
+
+/* Contact Information */
+
+.contact-information{
+    display: flex;
+    flex-direction: column;
+}
+
+#contact-information_header{
+    padding-top: 30px;
+    text-align: center;
+}
+
+#contact-information_form{
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    gap: 30px; 
+    /*width: 100%;*/
+}
+#about_me{
+    text-align: left;
+    width: 50%;
+    height: 250px;
+    padding: 8px;  
+    border: 1px solid black;
+    border-radius: 20px;
+}
+#about_me::placeholder {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    text-align: left;
+}
+
+#firstName, #lastName, #major, #email, #instagram{
+    text-align: left;
+    width: 50%;
+    height: 50px;
+    padding: 8px;
+    border: 1px solid black;
+    border-radius: 20px;
+}
+#consent_form{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+#submit_information{
+    width: 10%;
+    height: 30%;
+}
+
+
+/*MATCHED USER INFO*/
+.matchedusers{
+    margin-left: 10px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+.showUser{
+  display: block;
+  background-color:#fcf8f2;
+}
+
+#userdescription{
+    margin-left: 10px;
+    margin-bottom: 1px;
+
+}
+  
+  
+  .username {
+    display: flex;
+    align-items: center;
+    gap: 8px; 
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+    opacity: 0.5;
+    margin-left: 10px;
+    opacity: 0.5;
+    margin-top: 10px;
+  }
+  
+  
+  .user-major,
+  .user-aboutme,
+  .user-description,
+  .user-contact {
+    margin-left: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .wolfiePics {
+    width: 300px;
+  }
+
+  .infoDivs {
+    display: flex;
+    margin-left: 30%;
+    border: dotted #00549a;
+    border-radius: 25px;
+    margin-bottom: 10px;
+    width: 600px;
+  }
+
+  .writtenInfo {
+    margin-top: 20px;
+  }
+
+  .writtenHeader {
+    text-align: center;
+  }
+
+  #contact-information_header {
+    font-size: 30px;
+  }
+
+   /*TAKE QUIZ*/
+ #are_you_ready_description {
+  padding-top: 20px;
+  padding-left: 70px;
+  padding-right: 70px;
+  text-align: center;
+  font-size: 25px;
+  max-width: 1300px; /* Restricts width for better readability */
+  margin: auto; /* Centers the paragraph */
+}
+
+
+/* Centering the Start Quiz Section */
+#start_quiz {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 1300px;
+  margin: auto;
+  background-color: #fcf8f2;
+  border-radius: 40px;
+  border: dotted #00549a;
+  padding-bottom: 40px;
+}
+
+
+/* Button Styling */
+#startQuiz-btn {
+  margin-top: 50px;
+  background-color: #00549a;
+  color: #ffffff;
+  font-size: 20px;
+  width: 400px;
+  height: 70px;
+  border: none;
+  border-radius: 25px;
+  font-family: 'Irish Grover', 'serif';
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+}
+#start_quiz_page{
+    display: flex;
+    padding-top: 85px;
+      
+}
+
+
+/* Hover Effect for Better UX */
+#startQuiz-btn:hover {
+  background-color: #003366;
+}
+
+
+/* Congrats Form */
+#you_are{
+    text-align: center;
+}
+
+#createUser-btn {
+    margin-top: 50px;
+    background-color: #00549a;
+    color: #ffffff;
+    font-size: 20px;
+    width: 400px;
+    height: 70px;
+    border: none;
+    border-radius: 25px;
+    font-family: 'Irish Grover', 'serif';
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  #createUser-div {
+    justify-content: center;
+    display: flex;
+    padding-bottom: 20px;
+  }
+
+/* Submit button */
+#submit_information {
+  background-color: #00549a;
+  color: #fcfcfc;
+  width: 200px;
+  height: 50px;
+  margin-bottom: 15px;
+  font-family: 'Irish Grover', 'serif';
+  border-color: #00549a;
+  border-radius: 25px;
+}
+
+
+/* Background image */
+
+#backgroundImage {
+    position: fixed;
+    top: 0;
+    left: 0;
+    
+    object-fit: cover;
+    opacity: 0.6; /* Adjust as needed */
+    z-index: -1;
+}
+
+.wolfieResults{
+  width: 600px;
+}
+
+#results {
+  display: flex;
+  justify-content: center;
+}
