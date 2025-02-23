@@ -38,6 +38,8 @@ function loadHomePage() {
         <section class="homepage">
         <div class="homepage-content">
             <h1 class="red_heading">What Type of Seawolf are You?</h1>
+            <img id="standard_wolfie" src="standard_wolfie.png" alt="Drawn image of Wolfie">
+            <br>
             <button id="quiz-btn">take the quiz</button>
         </div>
         <div class="wolfie-image">
@@ -163,34 +165,32 @@ function loadResults(){
         <h1 class="congrats">Congratulations!</h1>
         <h2 id="you_are">You are...</h2>
         <div id="results"></div>
+        <div id="createUser-div">
         <button id="createUser-btn">Create User</button>
+        </div>
     `;
     const shareResult = document.getElementById("results");
     if(results[0].count == results[1].count && results[2].count == results[3].count && results[0].count == results[3].count){
-        // shareResult.innerHTML = `
-        //     result: you are... SUPER WOLFIE!!!!
-        // `;
-        // quizResult = 0;
+        shareResult.innerHTML = `
+            <!--<img id="superWolfieResult" class="wolfieResults" src="superWolfie_result.png" alt="a Super Wolfie!!">-->
+        `;
+        quizResult = 0;
     } else if(quizResult === 1){
-        // shareResult.innerHTML = `
-        //     <img class = "share_results", src = alt=>
-            
-        // `;
+        shareResult.innerHTML = `
+            <!--<img id="helloKittyResult" class="wolfieResults" src="helloKitty_result.png" alt="a Hello Kitty Wolfie!!">-->
+        `;
     } else if(quizResult === 2){
-        // shareResult.innerHTML = `
-        //     <img class = "share_results", src = alt=>
-            
-        // `;
+        shareResult.innerHTML = `
+            <!--<img id="kirbyWolfieResult" class="wolfieResults" src="kirby_result.png" alt="a Kirby Wolfie!!">-->
+        `;
     } else if(quizResult === 3){
-        // shareResult.innerHTML = `
-        //     <img class = "share_results", src = alt=>
-            
-        // `;
+        shareResult.innerHTML = `
+            <!--<img id="hopperWolfieResult" class="wolfieResults" src="hopper_result.png" alt="a Hopper Wolfie!!">-->
+        `;
     } else {
-        // shareResult.innerHTML = `
-        //     <img class = "share_results", src = alt=>
-            
-        // `;
+        shareResult.innerHTML = `
+            <!--<img id="pirateWolfieResult" class="wolfieResults" src="pirate_result.png" alt="a Pirate Wolfie!!">-->
+        `;
     }
     const createUser = document.getElementById("createUser-btn");
     createUser.addEventListener("click", loadCreateUser);
